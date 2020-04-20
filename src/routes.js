@@ -1,8 +1,8 @@
-import React from 'react'
-import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import React from 'react';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
-import MainPage from './pages/Main'
-import ContactPage from './pages/Contact'
+import MainPage from './pages/Main';
+import ContactPage from './pages/Contact';
 
 export default function Routes() {
   return (
@@ -12,5 +12,5 @@ export default function Routes() {
         <Route path="/contact" component={ContactPage} />
       </Switch>
     </BrowserRouter>
-  )
+  );
 }
