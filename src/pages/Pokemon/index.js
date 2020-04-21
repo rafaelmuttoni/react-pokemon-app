@@ -34,7 +34,7 @@ const PokemonPage = ({ match }) => {
     }
 
     getPokemon();
-  }, []);
+  }, [match.params.name]);
 
   const getEmoji = (name) => {
     const filtering = typesList.filter((el) => {
