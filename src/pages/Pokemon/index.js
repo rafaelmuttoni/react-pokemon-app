@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
+import { FaSpinner } from 'react-icons/fa';
+
+import * as S from './styled';
 import api from '../../services/api';
 
 const PokemonPage = ({ match }) => {
@@ -29,9 +32,11 @@ const PokemonPage = ({ match }) => {
   return (
     <>
       {loading ? (
-        <p>Loading...</p>
+        <S.Loading>
+          <FaSpinner color="#FFF" size={32} />
+        </S.Loading>
       ) : (
-        <>
+        <S.Container>
           <h1>{pokemon.name}</h1>
           <img src={pokemon.photoUrl} alt={pokemon.name} />
           <ul>
@@ -39,7 +44,7 @@ const PokemonPage = ({ match }) => {
               <li>{poketype.type.name}</li>
             ))}
           </ul>
-        </>
+        </S.Container>
       )}
     </>
   );
