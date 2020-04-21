@@ -1,4 +1,5 @@
 import styled, { keyframes } from 'styled-components';
+import { Link } from 'react-router-dom';
 
 const rotate = keyframes`
   from {
@@ -40,5 +41,27 @@ export const Container = styled.div`
 
   img {
     width: 288px;
+  }
+`;
+
+export const ReturnLink = styled(Link)`
+  background: #ff1f1f;
+  border-radius: 0.2rem;
+  padding: 1rem 0;
+  text-decoration: none;
+  color: white;
+  font-size: 1.4rem;
+  font-weight: 400;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  svg {
+    margin-right: 1rem;
+  }
+
+  &:hover {
+    filter: opacity(0.75);
   }
 `;

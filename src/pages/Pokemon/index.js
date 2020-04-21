@@ -75,7 +75,7 @@ const PokemonPage = ({ match }) => {
             </ul>
           </S.Container>
           <S.ReturnLink to="/">
-            <FaArrowLeft color="#FFF" size={32} />
+            <FaArrowLeft color="#FFF" size={20} /> GO BACK
           </S.ReturnLink>
         </>
       )}
