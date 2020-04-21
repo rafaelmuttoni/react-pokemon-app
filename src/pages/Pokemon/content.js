@@ -1,4 +1,4 @@
-export const emojiList = [
+export const typesList = [
   {
     name: 'normal',
     color: '#BCBCAE',

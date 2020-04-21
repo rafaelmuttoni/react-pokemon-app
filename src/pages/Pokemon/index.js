@@ -4,7 +4,7 @@ import { FaSpinner } from 'react-icons/fa';
 
 import * as S from './styled';
 import api from '../../services/api';
-import { emojiList } from './content';
+import { typesList } from './content';
 
 const PokemonPage = ({ match }) => {
   const [pokemon, setPokemon] = useState('');
@@ -31,10 +31,17 @@ const PokemonPage = ({ match }) => {
   useEffect(getPokemon, []);
 
   const getEmoji = (name) => {
-    const filtering = emojiList.filter((el) => {
+    const filtering = typesList.filter((el) => {
       return name === el.name;
     });
     return filtering[0].emoji;
+  };
+
+  const getColor = (name) => {
+    const filtering = typesList.filter((el) => {
+      return name === el.name;
+    });
+    return filtering[0].color;
   };
 
   return (
@@ -50,7 +57,7 @@ const PokemonPage = ({ match }) => {
           <ul>
             {types.map(({ type }) => {
               return (
-                <li>
+                <li style={{ backgroundColor: `${getColor(type.name)}` }}>
                   {getEmoji(type.name)} - {type.name}
                 </li>
               );
