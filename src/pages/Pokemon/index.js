@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
-import { FaSpinner } from 'react-icons/fa';
+import { FaSpinner, FaArrowLeft } from 'react-icons/fa';
 
 import * as S from './styled';
 import api from '../../services/api';
@@ -11,24 +11,30 @@ const PokemonPage = ({ match }) => {
   const [types, setTypes] = useState([]);
   const [loading, setLoading] = useState(false);
 
-  const getPokemon = async () => {
-    const pokemonName = match.params.name;
+  useEffect(() => {
+    async function getPokemon() {
+      const pokemonName = match.params.name;
 
-    setLoading(true);
+      setLoading(true);
 
-    const response = await api.get(`/${pokemonName}`);
+      try {
+        const response = await api.get(`/${pokemonName}`);
 
-    const data = {
-      name: response.data.species.name,
-      photoUrl: response.data.sprites.front_default,
-    };
+        const data = {
+          name: response.data.species.name,
+          photoUrl: response.data.sprites.front_default,
+        };
 
-    setPokemon(data);
-    setTypes(response.data.types);
-    setLoading(false);
-  };
+        setPokemon(data);
+        setTypes(response.data.types);
+        setLoading(false);
+      } catch (err) {
+        console.log(err);
+      }
+    }
 
-  useEffect(getPokemon, []);
+    getPokemon();
+  }, []);
 
   const getEmoji = (name) => {
     const filtering = typesList.filter((el) => {
@@ -51,19 +57,27 @@ const PokemonPage = ({ match }) => {
           <FaSpinner color="#FFF" size={32} />
         </S.Loading>
       ) : (
-        <S.Container>
-          <h1>{pokemon.name}</h1>
-          <img src={pokemon.photoUrl} alt={pokemon.name} />
-          <ul>
-            {types.map(({ type }) => {
-              return (
-                <li style={{ backgroundColor: `${getColor(type.name)}` }}>
-                  {getEmoji(type.name)} - {type.name}
-                </li>
-              );
-            })}
-          </ul>
-        </S.Container>
+        <>
+          <S.Container>
+            <h1>{pokemon.name}</h1>
+            <img src={pokemon.photoUrl} alt={pokemon.name} />
+            <ul>
+              {types.map(({ type }) => {
+                return (
+                  <li
+                    key={type.name}
+                    style={{ backgroundColor: `${getColor(type.name)}` }}
+                  >
+                    {getEmoji(type.name)} - {type.name}
+                  </li>
+                );
+              })}
+            </ul>
+          </S.Container>
+          <S.ReturnLink to="/">
+            <FaArrowLeft color="#FFF" size={32} />
+          </S.ReturnLink>
+        </>
       )}
     </>
   );
