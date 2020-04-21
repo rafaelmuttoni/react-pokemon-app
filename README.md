@@ -16,9 +16,15 @@ A React App fetching data from PokéAPI.
     "react-router-dom": "^5.1.2",
     "styled-components": "^5.1.0"
 }
+
+"devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.8.0",
+    "prettier": "^2.0.4"
+}
 ```
 
-## 🚀 Quick start
+## 🚀 Clone Tutorial
 
 1.  **Clone this repository.**
 
