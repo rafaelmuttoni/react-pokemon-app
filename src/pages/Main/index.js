@@ -37,7 +37,8 @@ const MainPage = () => {
       const response = await api.get(`/${lowerCase}`);
 
       const data = {
-        name: response.data.species.name,
+        name: response.data.name,
+        id: response.data.id,
         image: response.data.sprites.front_default,
       };
 
@@ -63,7 +64,7 @@ const MainPage = () => {
       <S.Form onSubmit={handleSubmit}>
         <input
           type="text"
-          placeHolder="Digite o Pokemon"
+          placeholder="Digite o Pokemon"
           value={newPokemon}
           onChange={handleInput}
         />
@@ -87,11 +88,11 @@ const MainPage = () => {
       )}
 
       <S.List>
-        {allPokemons.map(({ name, image }) => {
+        {allPokemons.map(({ name, id, image }) => {
           const nameCaps = name.toUpperCase();
           return (
-            <S.PokeLink to={`/pokemon/${name}`}>
-              <li key={name}>
+            <S.PokeLink to={`/pokemon/${name}`} key={id}>
+              <li>
                 <img src={image} alt={name} />
                 <span>{nameCaps}</span>
               </li>
