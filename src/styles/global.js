@@ -52,4 +52,7 @@ export default createGlobalStyle`
     min-height: 100%;
     -webkit-font-smoothing: antialiased !important;
     background: #fbd743;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 `;
