@@ -1,8 +1,22 @@
+<p align="center">
+  <img width="144" height="144" src="https://pokeapi.co/icons/icon-144x144.png">
+</p>
 <h1 align="center">
-  Muttoni's React starter
+  React App with PokéAPI
 </h1>
 
-Muttoni's default starter for React Projects. This starter was build with create-react-app with a cleanup, basic routing configuration and styled-components.
+A React App fetching data from PokéAPI.
+
+**Dependecies installed**
+```javascript
+"dependencies": {
+    "axios": "^0.19.2",
+    "prop-types": "^15.7.2",
+    "react-icons": "^3.9.0",
+    "react-router-dom": "^5.1.2",
+    "styled-components": "^5.1.0"
+}
+```
 
 ## 🚀 Quick start
 
@@ -11,26 +25,16 @@ Muttoni's default starter for React Projects. This starter was build with create
     Clone this repository using git clone.
 
     ```shell
-    # create a new site using this default starter
-    git clone git@github.com:rafaelmuttoni/muttoni-starter-react.git name-of-your-website
+    git clone git@github.com:rafaelmuttoni/react-pokemon-app.git name-of-your-webapp
     ```
 
-1.  **Install your dependencies.**
+1.  **Install the dependencies.**
 
     Navigate into your new site’s directory and run "yarn" to install the dependencies.
 
     ```shell
-    cd name-of-your-website/
+    cd name-of-your-webapp/
     yarn
-    ```
-
-1.  **Git setup.**
-
-    Unlink current git repo and link to your new one.
-
-    ```shell
-    git remote rm origin
-    git remote add origin link-to-your-new-repo
     ```
     
 1.  **Start developing!**
