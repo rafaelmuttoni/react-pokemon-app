@@ -7,7 +7,8 @@
 
 A React App fetching data from PokéAPI.
 
-**Dependecies installed**
+## 💻 Dependecies Installed
+
 ```javascript
 "dependencies": {
     "axios": "^0.19.2",
