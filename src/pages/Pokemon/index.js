@@ -4,6 +4,7 @@ import { FaSpinner } from 'react-icons/fa';
 
 import * as S from './styled';
 import api from '../../services/api';
+import { emojiList } from './content';
 
 const PokemonPage = ({ match }) => {
   const [pokemon, setPokemon] = useState('');
@@ -29,6 +30,13 @@ const PokemonPage = ({ match }) => {
 
   useEffect(getPokemon, []);
 
+  const getEmoji = (name) => {
+    const filtering = emojiList.filter((el) => {
+      return name === el.name;
+    });
+    return filtering[0].emoji;
+  };
+
   return (
     <>
       {loading ? (
@@ -40,9 +48,13 @@ const PokemonPage = ({ match }) => {
           <h1>{pokemon.name}</h1>
           <img src={pokemon.photoUrl} alt={pokemon.name} />
           <ul>
-            {types.map((poketype) => (
-              <li>{poketype.type.name}</li>
-            ))}
+            {types.map(({ type }) => {
+              return (
+                <li>
+                  {getEmoji(type.name)} - {type.name}
+                </li>
+              );
+            })}
           </ul>
         </S.Container>
       )}

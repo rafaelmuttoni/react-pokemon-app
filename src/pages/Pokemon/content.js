@@ -1,82 +1,102 @@
-const types = [
+export const emojiList = [
   {
     name: 'normal',
-    url: 'https://pokeapi.co/api/v2/type/1/',
+    color: '#BCBCAE',
+    emoji: '😐',
   },
   {
     name: 'fighting',
-    url: 'https://pokeapi.co/api/v2/type/2/',
+    color: '#A75642',
+    emoji: '🥊',
   },
   {
     name: 'flying',
-    url: 'https://pokeapi.co/api/v2/type/3/',
+    color: '#79A4FF',
+    emoji: '🕊️',
   },
   {
     name: 'poison',
-    url: 'https://pokeapi.co/api/v2/type/4/',
+    color: '#AB5EA2',
+    emoji: '☣️',
   },
   {
     name: 'ground',
-    url: 'https://pokeapi.co/api/v2/type/5/',
+    color: '#EDCB56',
+    emoji: '🗻',
   },
   {
     name: 'rock',
-    url: 'https://pokeapi.co/api/v2/type/6/',
+    color: '#CEBD72',
+    emoji: '🤘',
   },
   {
     name: 'bug',
-    url: 'https://pokeapi.co/api/v2/type/7/',
+    color: '#C2D21F',
+    emoji: '🐛',
   },
   {
     name: 'ghost',
-    url: 'https://pokeapi.co/api/v2/type/8/',
+    color: '#7A76D8',
+    emoji: '👻',
   },
   {
     name: 'steel',
-    url: 'https://pokeapi.co/api/v2/type/9/',
+    color: '#C4C2DB',
+    emoji: '⚔️',
   },
   {
     name: 'fire',
-    url: 'https://pokeapi.co/api/v2/type/10/',
+    color: '#FA5643',
+    emoji: '🔥',
   },
   {
     name: 'water',
-    url: 'https://pokeapi.co/api/v2/type/11/',
+    color: '#56AEFF',
+    emoji: '🌊',
   },
   {
     name: 'grass',
-    url: 'https://pokeapi.co/api/v2/type/12/',
+    color: '#8DD851',
+    emoji: '🌱',
   },
   {
     name: 'electric',
-    url: 'https://pokeapi.co/api/v2/type/13/',
+    color: '#FDE53E',
+    emoji: '⚡',
   },
   {
     name: 'psychic',
-    url: 'https://pokeapi.co/api/v2/type/14/',
+    color: '#FA64B5',
+    emoji: '🔮',
   },
   {
     name: 'ice',
-    url: 'https://pokeapi.co/api/v2/type/15/',
+    color: '#96F1FF',
+    emoji: '🧊',
   },
   {
     name: 'dragon',
-    url: 'https://pokeapi.co/api/v2/type/16/',
+    color: '#8A76FF',
+    emoji: '🐉',
   },
   {
     name: 'dark',
-    url: 'https://pokeapi.co/api/v2/type/17/',
+    color: '#8E6956',
+    emoji: '⚫',
   },
   {
     name: 'fairy',
-    url: 'https://pokeapi.co/api/v2/type/18/',
+    color: '#F9ADFF',
+    emoji: '🧚',
   },
   {
     name: 'unknown',
-    url: 'https://pokeapi.co/api/v2/type/10001/',
+    color: '#F74141',
+    emoji: '❓',
   },
   {
     name: 'shadow',
-    url: 'https://pokeapi.co/api/v2/type/10002/',
+    color: '#3D2092',
+    emoji: '👥',
   },
 ];
