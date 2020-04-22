@@ -10,6 +10,7 @@ const PokemonPage = ({ match }) => {
   const [pokemon, setPokemon] = useState('');
   const [types, setTypes] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [visible, setVisible] = useState(true);
 
   useEffect(() => {
     async function getPokemon() {
@@ -22,7 +23,8 @@ const PokemonPage = ({ match }) => {
 
         const data = {
           name: response.data.species.name,
-          photoUrl: response.data.sprites.front_default,
+          photoFront: response.data.sprites.front_default,
+          photoBack: response.data.sprites.back_default,
         };
 
         setPokemon(data);
@@ -60,7 +62,12 @@ const PokemonPage = ({ match }) => {
         <>
           <S.Container>
             <h1>{pokemon.name}</h1>
-            <img src={pokemon.photoUrl} alt={pokemon.name} />
+            <img
+              onMouseEnter={() => setVisible(!visible)}
+              onMouseLeave={() => setVisible(!visible)}
+              src={visible ? pokemon.photoFront : pokemon.photoBack}
+              alt={pokemon.name}
+            />
             <ul>
               {types.map(({ type }) => {
                 return (
@@ -75,7 +82,7 @@ const PokemonPage = ({ match }) => {
             </ul>
           </S.Container>
           <S.ReturnLink to="/">
-            <FaArrowLeft color="#FFF" size={20} /> GO BACK
+            <FaArrowLeft color="#FFF" size={14} /> HOME
           </S.ReturnLink>
         </>
       )}
