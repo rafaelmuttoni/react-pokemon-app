@@ -1,4 +1,5 @@
 import styled, { keyframes } from 'styled-components';
+import media from 'styled-media-query';
 import { Link } from 'react-router-dom';
 
 const rotate = keyframes`
@@ -38,11 +39,17 @@ export const Container = styled.div`
     font-size: 3rem;
     font-weight: 300;
     color: #333;
+    ${media.lessThan('large')`
+      font-size: 2rem;
+    `}
   }
 
   img {
     width: 288px;
     margin: 1rem 0;
+    ${media.lessThan('large')`
+      width: 194px;
+    `}
   }
 
   li {
@@ -63,6 +70,10 @@ export const ReturnLink = styled(Link)`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  ${media.lessThan('large')`
+    margin: 0 3rem;
+  `}
 
   svg {
     margin-right: 1rem;

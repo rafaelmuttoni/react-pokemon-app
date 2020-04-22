@@ -1,4 +1,5 @@
 import styled, { keyframes } from 'styled-components';
+import media from 'styled-media-query';
 
 import { Link } from 'react-router-dom';
 
@@ -16,6 +17,10 @@ export const Container = styled.div`
     font-size: 3rem;
     font-weight: 300;
     color: #333;
+
+    ${media.lessThan('large')`
+      font-size: 2rem;
+    `}
   }
 `;
 
