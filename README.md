@@ -1,12 +1,5 @@
 ![Netlify Status](https://api.netlify.com/api/v1/badges/6ec35d25-adc1-40e7-be1e-4d73e816d5fa/deploy-status)
 <p>
-  <img width="144" height="144" src="https://pokeapi.co/icons/icon-144x144.png">
-</p>
-<h1>
-  Pokémon Searcher :mag_right:
-</h1>
-
-<p>
   <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/rafaelmuttoni/react-pokemon-app.svg">
 
   <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/rafaelmuttoni/react-pokemon-app.svg">
@@ -22,7 +15,15 @@
   </a>
 </p>
 
-A React App fetching data from PokéAPI.
+<p>
+  <img width="144" height="144" src="https://pokeapi.co/icons/icon-144x144.png">
+</p>
+
+<h1>
+  Pokémon Searcher :mag_right:
+</h1>
+
+<p>A React App fetching data from PokéAPI.</p>
 
 ## :rocket: Technologies
 
