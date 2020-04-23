@@ -1,3 +1,4 @@
+![Netlify Status](https://api.netlify.com/api/v1/badges/6ec35d25-adc1-40e7-be1e-4d73e816d5fa/deploy-status)
 <p align="center">
   <img width="144" height="144" src="https://pokeapi.co/icons/icon-144x144.png">
 </p>
@@ -5,43 +6,50 @@
   React App with PokéAPI
 </h1>
 
+<p>
+  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/rafaelmuttoni/react-pokemon-app.svg">
+
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/rafaelmuttoni/react-pokemon-app.svg">
+
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/rafaelmuttoni/react-pokemon-app.svg">
+
+  <a href="https://github.com/rafaelmuttoni/react-pokemon-app/commits/master">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/rafaelmuttoni/react-pokemon-app.svg">
+  </a>
+
+  <a href="https://github.com/rafaelmuttoni/react-pokemon-app/issues">
+    <img alt="Repository issues" src="https://img.shields.io/github/issues/rafaelmuttoni/react-pokemon-app.svg">
+  </a>
+</p>
+
 A React App fetching data from PokéAPI.
 
-## 💻 Dependecies Installed
+## :rocket: Technologies
 
-```javascript
-"dependencies": {
-    "axios": "^0.19.2",
-    "prop-types": "^15.7.2",
-    "react-icons": "^3.9.0",
-    "react-router-dom": "^5.1.2",
-    "styled-components": "^5.1.0"
-}
+This project is currently using the following technologies:
 
-"devDependencies": {
-    "babel-eslint": "^10.1.0",
-    "eslint": "^6.8.0",
-    "prettier": "^2.0.4"
-}
-```
+- React
+- Axios
+- styled-components
+- Netlify
 
-## 🚀 Clone Tutorial
+## :information_source: How To Use
 
 1.  **Clone this repository.**
 
     Clone this repository using git clone.
 
     ```shell
-    git clone git@github.com:rafaelmuttoni/react-pokemon-app.git name-of-your-webapp
+    $ git clone git@github.com:rafaelmuttoni/react-pokemon-app.git
     ```
 
 1.  **Install the dependencies.**
 
-    Navigate into your new site’s directory and run "yarn" to install the dependencies.
+    Navigate into the directory and run "yarn" to install the dependencies.
 
     ```shell
-    cd name-of-your-webapp/
-    yarn
+    $ cd react-pokemon-app
+    $ yarn
     ```
     
 1.  **Start developing!**
@@ -52,3 +60,7 @@ A React App fetching data from PokéAPI.
     code .
     yarn start
     ```
+
+---
+
+:wave: [Get in touch!](https://www.linkedin.com/in/rafaelmuttoni/)
