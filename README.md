@@ -1,8 +1,8 @@
 ![Netlify Status](https://api.netlify.com/api/v1/badges/6ec35d25-adc1-40e7-be1e-4d73e816d5fa/deploy-status)
-<p align="center">
+<p>
   <img width="144" height="144" src="https://pokeapi.co/icons/icon-144x144.png">
 </p>
-<h1 align="center">
+<h1>
   React App with PokéAPI
 </h1>
 
