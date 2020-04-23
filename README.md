@@ -3,7 +3,7 @@
   <img width="144" height="144" src="https://pokeapi.co/icons/icon-144x144.png">
 </p>
 <h1>
-  React App with PokéAPI
+  Pokemon Searcher :mag_right:
 </h1>
 
 <p>
