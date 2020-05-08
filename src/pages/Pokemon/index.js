@@ -63,8 +63,7 @@ const PokemonPage = ({ match }) => {
           <S.Container>
             <h1>{pokemon.name}</h1>
             <img
-              onMouseEnter={() => setVisible(!visible)}
-              onMouseLeave={() => setVisible(!visible)}
+              onClickCapture={() => setVisible(!visible)}
               src={visible ? pokemon.photoFront : pokemon.photoBack}
               alt={pokemon.name}
             />
