@@ -16,7 +16,7 @@
 </p>
 
 <p>
-  <img width="144" height="144" src="https://pokeapi.co/icons/icon-144x144.png">
+  <img width="144" height="144" src="https://i.pinimg.com/originals/6b/77/0d/6b770d90c3d60e5750809cfafa11c584.png">
 </p>
 
 <h1>
